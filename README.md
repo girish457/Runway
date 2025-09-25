@@ -42,21 +42,25 @@ git clone <repository-url>
 cd mern-ecommerce-2024-master
 ```
 
-2. Install server dependencies:
+2. Install all dependencies:
 ```bash
-cd server
-npm install
-```
-
-3. Install client dependencies:
-```bash
-cd ../client
-npm install
+npm run install:all
 ```
 
 ## Running the Application
 
-### Start the Server
+### Development Mode
+
+To run both frontend and backend together:
+```bash
+npm run dev
+```
+
+This will start:
+- Backend server on http://localhost:5000
+- Frontend development server on http://localhost:5173
+
+### Start the Server Only
 
 ```bash
 cd server
@@ -65,7 +69,7 @@ npm start
 
 The server will start on http://localhost:5000
 
-### Start the Client
+### Start the Client Only
 
 ```bash
 cd client
@@ -73,6 +77,28 @@ npm run dev
 ```
 
 The client will start on http://localhost:5173
+
+## Deployment
+
+### Backend Deployment
+
+1. Update the `.env` file in the `server` directory with production values
+2. Deploy to your preferred platform (Render, Railway, or Heroku)
+3. Set the start command to `npm start`
+4. Add all environment variables to your deployment platform
+
+### Frontend Deployment
+
+1. Update `API_BASE_URL` in `client/src/config/api.js` with your deployed backend URL
+2. Build the frontend:
+   ```bash
+   cd client
+   npm run build
+   ```
+3. Deploy the `client/dist` folder to Vercel or Netlify
+4. Set the build command to `npm run build` and output directory to `dist`
+
+For detailed deployment instructions, see [DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md)
 
 ## Usage
 

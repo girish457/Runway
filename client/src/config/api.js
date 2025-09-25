@@ -1,6 +1,6 @@
 // API Configuration
-// Make sure this matches the port where your server is running
-export const API_BASE_URL = 'http://localhost:5000';
+// For production deployment, replace the localhost URL with your backend URL
+export const API_BASE_URL = "http://localhost:5000"; // Change this for production
 
 // API Endpoints
 export const API_ENDPOINTS = {
