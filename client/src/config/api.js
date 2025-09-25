@@ -1,6 +1,6 @@
 // API Configuration
 // For production deployment, replace the localhost URL with your backend URL
-export const API_BASE_URL = "http://localhost:5000"; // Change this for production
+export const API_BASE_URL = "https://your-render-app-name.onrender.com"; // Change this to your Render backend URL
 
 // API Endpoints
 export const API_ENDPOINTS = {
